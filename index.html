@@ -10,7 +10,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <title>Crystal Game</title>
+    <title>Crystal Collector</title>
 </head>
 
 <body>
@@ -21,54 +21,56 @@
 
     <!-- Crystal/Game Container Div -->
     <div class="container crystalContainer">
-       <!-- Instructions --> 
-       <div class="row text-center">
+        <!-- Instructions -->
+        <div class="row text-center">
             <div class="col-lg-12 directions">
                 <p>Each crystal holds a different random value. Can you add your crystal clicks together
                     to equal the magic number? If you get too greedy and add too much, you'll lose! Good luck!</p>
             </div>
         </div>
-        <!-- The Random Number -->
-        <div class="row text-center jointBackground">
+        <div class="jointBackground">
+            <!-- The Random Number -->
+            <div class="row text-center">
                 <div class="col-lg-12">
                     <h3>The Random Number: <span id="randomNumberHolder"></span></h3>
                 </div>
             </div>
-        <!-- Crystals -->
-        <div class="row jointBackground">
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-                <img class="crystalPic" id="crystal1" src="assets/images/crystal1.png" alt="Crystal 1" />
+            <!-- Crystals -->
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalPic" id="crystal1" src="assets/images/crystal1.png" alt="Crystal 1" />
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalPic" id="crystal2" src="assets/images/crystal2.png" alt="Crystal 2" />
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalPic" id="crystal3" src="assets/images/crystal3.png" alt="Crystal 3" />
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+                    <img class="crystalPic" id="crystal4" src="assets/images/crystal4.png" alt="Crystal 4" />
+                </div>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-                <img class="crystalPic" id="crystal2" src="assets/images/crystal2.png" alt="Crystal 2" />
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-                <img class="crystalPic" id="crystal3" src="assets/images/crystal3.png" alt="Crystal 3" />
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
-                <img class="crystalPic" id="crystal4" src="assets/images/crystal4.png" alt="Crystal 4" />
-            </div>
-        </div>
-        <!-- Scores and Reset -->
-        <div class="row text-center jointBackground">
-            <div class="col-lg-6 userScore">
-                <h3>Your Score: <span id="userScore"></span></h3>
-            </div>
-            <div class="col-lg-6 totalScore">
-                <h3>Wins: <span id="totalWins"></span></h3>
-                <h3>Losses: <span id="totalLosses"></span></h3>
-            </div>
-            <div class="col-lg-12 resetButton">
-                    <h3>Click to play again:</h3>
+            <!-- Scores and Reset -->
+            <div class="row text-center scoresRow">
+                <div class="col-lg-4 userScore">
+                    <h3>Your Score: <span id="userScore"></span></h3>
+                </div>
+                <div class="col-lg-4 resetButton">
                     <button type="button" class="btn btn-light btn-lg" id="playAgain">Play Again!</button>
                 </div>
+                <div class="col-lg-4 totalScore">
+                    <h3>Wins: <span id="totalWins"></span></h3>
+                    <h3>Losses: <span id="totalLosses"></span></h3>
+                </div>
+
+            </div>
         </div>
 
     </div>
     <div class="footer text-center">
         <h6>Game made using HTML, CSS, and jQuery.</h6>
-        Icons made by <a href="https://www.flaticon.com/authors/freepik"
-            title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
     </div>
 
     <!-- jQuery -->
