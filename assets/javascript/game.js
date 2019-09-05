@@ -21,7 +21,7 @@ var crystal2 = Math.ceil(Math.random() * 12);
 var crystal3 = Math.ceil(Math.random() * 12);
 var crystal4 = Math.ceil(Math.random() * 12);
 
-// Function to reset: New randomComputerNumber, 4 new crystal values, userScore resets to 0 
+// Function to reset randomComputerNumber, 4 crystal values, userScore resets to 0 
 // wins,losses remain the same
 function resetNumbers(){
     randomComputerNumber = Math.floor(Math.random() * 101) + 19;
@@ -31,9 +31,9 @@ function resetNumbers(){
     crystal4 = Math.ceil(Math.random() * 12);
     userScore = 0;
     $("#userScore").text(userScore);
+    $("#randomNumberHolder").text(randomComputerNumber);
 }
 
-resetNumbers();
 
 
 
@@ -116,9 +116,10 @@ $("#crystal4").on('click', function(){
 // Play Again Button, also not working 
 $("#playAgain").on('click', function(){
     resetNumbers();
-    userScore = 0;
     wins = 0;
     losses = 0;
+    $("#totalWins").text(wins);
+    $("#totalLosses").text(losses);
 
 });
 
