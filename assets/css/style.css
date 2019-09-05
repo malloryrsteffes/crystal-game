@@ -1,0 +1,19 @@
+html {
+	box-sizing: border-box;
+}
+#crystalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crystal {
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.crystalPic {
+	width: 150px;
+	margin: 30px auto;
+}
