@@ -1,15 +1,19 @@
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif!important;
+
 }
 
 body {
     background-image: url(../images/crystalbackground.jpg);
     background-size: cover;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif!important;
 }
 
 .header {
     margin-top: 10px;
+    background-color:rgba(212,212,212,.2);
+
 }
 
 #crystalContainer {
@@ -18,15 +22,25 @@ body {
     align-items: center;
 }
 
+.directions {
+    background-color:rgba(212,212,212,.2);
+}
+
 .directions,
 p {
     width: 60%;
     margin: 0 auto;
+
 }
 
 .row {
     margin: 0 auto;
     padding: 20px;
+}
+
+.jointBackground {
+    background-color:rgba(212,212,212,.2);
+
 }
 
 .col-lg-6 {
