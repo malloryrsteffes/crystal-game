@@ -21,6 +21,14 @@ var crystal2 = Math.ceil(Math.random() * 12);
 var crystal3 = Math.ceil(Math.random() * 12);
 var crystal4 = Math.ceil(Math.random() * 12);
 
+// Plays Sounds, hopefully
+var crystalSound1 = document.getElementById("crystalSound4");
+var crystalSound2 = document.getElementById("crystalSound2");
+var crystalSound3 = document.getElementById("crystalSound3");
+var crystalSound4 = document.getElementById("crystalSound4");
+var winGameSound = document.getElementById("winGameSound");
+var loseGameSound = document.getElementById("loseGameSound");
+
 // Function to reset randomComputerNumber, 4 crystal values, userScore resets to 0 
 // wins,losses remain the same
 function resetNumbers(){
@@ -44,6 +52,7 @@ function win(){
     wins++;
     $("#totalWins").text(wins);
     resetNumbers();
+    winGameSound.play();
 }
 
 // Lose Function
@@ -52,16 +61,20 @@ function lose(){
     losses++;
     $("#totalLosses").text(losses);
     resetNumbers();
+    loseGameSound.play();
 }
 
 // CRYSTAL CLICK FUNCTIONS
 //When you click any crystal, it should add its value to your userScore 
-$("#crystal1").on('click', function(){
-    userScore = userScore + crystal1;
 
+// Crystal 1  
+
+$("#crystal1").on('click', function(){
+    crystalSound1.play();
+    userScore = userScore + crystal1;
     $("#userScore").text(userScore);
-    //This is where something breaks. Sometimes it recognizes the loss condition too early or too late,
-    //sometimes not at all. Same with the win condition!
+    //$('audio#crystalSound1').play();  
+    // The above doesn't work - at least not placed here or I've typed it incorrectly
         if (userScore === randomComputerNumber){
             win();
         }
@@ -69,9 +82,13 @@ $("#crystal1").on('click', function(){
         else if (userScore > randomComputerNumber){
             lose();
         }
+
 });
 
+//Crystal 2
 $("#crystal2").on('click', function(){
+   
+    crystalSound2.play();
     userScore = userScore + crystal2;
 
     $("#userScore").text(userScore);
@@ -85,7 +102,10 @@ $("#crystal2").on('click', function(){
         }
 });
 
+//Crystal 3
 $("#crystal3").on('click', function(){
+
+    crystalSound3.play();
     userScore = userScore + crystal3;
 
     $("#userScore").text(userScore);
@@ -99,7 +119,10 @@ $("#crystal3").on('click', function(){
         }
 });
 
+// Crystal 4
 $("#crystal4").on('click', function(){
+
+    crystalSound4.play();
     userScore = userScore + crystal4;
 
     $("#userScore").text(userScore);
@@ -113,7 +136,7 @@ $("#crystal4").on('click', function(){
         }
 });
 
-// Play Again Button, also not working 
+// Play Again Button, calls the resetNumbers function and resets the wins and losses to zero.
 $("#playAgain").on('click', function(){
     resetNumbers();
     wins = 0;
@@ -122,6 +145,8 @@ $("#playAgain").on('click', function(){
     $("#totalLosses").text(losses);
 
 });
+
+
 
 
 })
