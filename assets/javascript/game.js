@@ -71,6 +71,7 @@ function lose(){
 
 $("#crystal1").on('click', function(){
     crystalSound1.play();
+
     userScore = userScore + crystal1;
     $("#userScore").text(userScore);
     //$('audio#crystalSound1').play();  
